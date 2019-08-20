@@ -1,7 +1,6 @@
 /*==================================
 * Author        : "ThemeSine"
-* Template Name :  Browny  HTML Template
-* Version       : 1.0
+* Redesign      : Stephen W.
 ==================================== */
 
 /*==================================
@@ -14,13 +13,17 @@ font-family: 'Poppins', sans-serif;
 2.  Header
 3.  Welcome-hero
 4.  About me
+5.  Experience
+6.  Hackathon
+7.  eSports (Portfolio)
+8.  Profiles (Contact page)
+
+---Dont use:
 5.  Education
 6.  Skill
-7.  Experience
-8.  Profiles
-9.  Portfolio
 10. Clients
-11. Contact
+11. Contact (Replaced by Profiles)
+  -Scroll top
 
 /*-------------------------------------
 		1.General css (Reset code)
@@ -37,13 +40,14 @@ font-family: 'Poppins', sans-serif;
 	-ms-box-sizing:border-box;
 	box-sizing:border-box;
 }
-body{
+
+body {
 	font-family: 'Poppins', sans-serif;
 	font-size:16px;
 	color: #676a81;
 	background: #fff;
   /*Deleted max-width:1920px to make it full page*/
-    margin:0 auto;
+  margin:0 auto;
 	overflow-x:hidden;
 }
 
@@ -54,13 +58,17 @@ a,a:hover,a:active,a:focus {
 	font-size:16px;
 	padding:0;
 }
-h1,h2,h3,h4,h5,h6 {
-	margin: 0;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+
 	color:#43485c;
-    font-size: 16px;
+  font-size: 16px;
 	font-family: 'Poppins', sans-serif;
 	text-transform: capitalize;
+
 }
+
 p {
 	margin: 0;
 	line-height:1.8;
@@ -68,8 +76,14 @@ p {
 	font-size:14px;
 	font-family: 'Poppins', sans-serif;
 }
-img{border:none;max-width:100%; height:auto;}
-ul{
+
+img {
+  border: none;
+  max-width:100%;
+  height:auto;
+}
+
+ul {
 	padding: 0;
     margin: 0 auto;
     list-style: none;
@@ -95,7 +109,11 @@ html,body{
   opacity: 0;
 }
 
-.fix{position: relative;clear: both;}
+.fix {
+  position: relative;
+  clear: both;
+}
+
 /*=============Style css=========*/
 
 /*-------------------------------------
@@ -105,7 +123,10 @@ html,body{
     position: relative;
     z-index: 9999;
 }
-@media (min-width: 1024px){}
+
+@media (min-width: 1024px){
+
+}
 nav.navbar.bootsnav.no-background {
     background-color: #fff;
     border: none;
@@ -121,8 +142,10 @@ nav.navbar.bootsnav {
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
     display: inline-block;
     color: #d92cf9;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
+    position: absolute; /* allows nav brand to over step boundaries to the left more hence left: -10%; */
+    left: -10%;
     padding: 33px 0px 57px;
     text-transform: uppercase;
 }
@@ -130,7 +153,7 @@ nav.navbar.bootsnav {
 
 /*.nav li*/
 nav.navbar.bootsnav ul.nav > li > a {
-    font-size: 16px;
+    font-size: 20px; /* increases size a bit more 8.7.19*/
     font-weight: 400;
     text-transform:uppercase;
     -webkit-transition: 0.3s linear;
@@ -139,7 +162,11 @@ nav.navbar.bootsnav ul.nav > li > a {
     -o-transition: 0.3s linear;
     transition: 0.3s linear;
 }
-nav.navbar.bootsnav ul.nav > li > a {padding: 35px 20px;}
+
+nav.navbar.bootsnav ul.nav > li > a {
+  padding: 35px 20px;
+}
+
 nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>a{color: #d92cf9;}
 
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
@@ -245,8 +272,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*-------------------------------------
         4.  About
 --------------------------------------*/
-.about {padding: 50px 0 100px;}
-.about-content {padding-top: 100px;}
+.about {
+  padding: 50px 0 100px;
+}
+
+.about-content {
+  padding-top: 100px;
+}
+
 /*.single-about-txt*/
 .single-about-txt h3 {
     font-size:18px;
@@ -254,12 +287,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     text-transform: initial;
     line-height: 1.8;
 }
+
 .single-about-txt p {
     font-size: 16px;
     color: #999fb3;
     padding: 35px 0 43px;
     border-bottom: 1px solid #999fb3;
 }
+
 .single-about-add-info {
     margin: 35px 0;
 }
@@ -273,7 +308,9 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 
 /*.single-about-img */
 .single-about-img {
-  position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30);
+  position: relative;
+  box-shadow: 0 5px 20px
+  rgba(14,25,80,.30);
 
 }
 
@@ -332,133 +369,30 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*.single-about-img */
 
 /*-------------------------------------
-        5.  Education
---------------------------------------*/
-
-.education {
-    background:  #f9fbfd;
-    padding-top:  50px;
-}
-.education-horizontal-timeline {
-    padding: 80px 0;
-}
-
-/*.education-horizontal-timeline*/
-.education-horizontal-timeline .col-sm-4 {padding:0 2px;}
-
-.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
-.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
-.single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
-.single-horizontal-timeline p {color: #999fb3;max-width: 335px;}
-
-/*.timeline-horizontal-border*/
-.timeline-horizontal-border {
-    display:  flex;
-    align-items: center;
-    padding: 26px 0 30px;
-}
-.timeline-horizontal-border i {
-    font-size:  10px;
-    color: #d92cf9;
-    margin-right:  5px;
-}
-span.single-timeline-horizontal {
-    display:  inline-block;
-    background: #b2c1ce;
-    height:  1px;
-    width: 380px;
-}
-span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
-/*.timeline-horizontal-border*/
-
-/*.education-horizontal-timeline*/
-
-/*-------------------------------------
-        6.  Skills
---------------------------------------*/
-.skills {
-
-}
-.skill-content{padding: 50px 0 80px;}
-.single-skill-content{padding-top: 100px;}
-.section-heading h2 {
-    font-size: 24px;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #e5ebf2;
-}
-.single-progress-txt {
-    display: flex;
-}
-.single-progress-txt h3 {
-    width: 10%;
-    color: #a606c3;
-    position: relative;
-    top: 6px;
-    left: 20px;
-}
-.barWrapper {
-    font-weight: 400;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-.progress {
-    border-radius:3px;
-    overflow: visible;
-    background: #e6ecf3;
-    height:8px;
-    margin-top: 15px;
-    width: 85%;
-    margin-bottom: 37px;
-}
-.progress-bar {
-   background: #b636ff;
-    border-radius: 3px;
-   -webkit-transition: width 1.5s ease-in-out;
-   -ms-transition: width 1.5s ease-in-out;
-   -moz-transition: width 1.5s ease-in-out;
-   -o-transition: width 1.5s ease-in-out;
-   transition: width 1.5s ease-in-out;
-}
-.tooltip{
-   position:relative;
-   float:right;
-}
-.tooltip > .tooltip-inner {
-   background-color: transparent;
-   padding: 1px 5px;
-   color: #b636ff;
-   font-weight: 500;
-   font-size: 12px;
-   border-radius: 0;
-}
-.popOver + .tooltip > .tooltip-arrow {
-   border-left: 6px solid transparent;
-   border-right: 6px solid transparent;
-   border-top: 6px solid #fff;
-   bottom: -1px;
-   transform: translateX(-50%);
-   margin-left: 0;
-}
-
-/*-------------------------------------
-        7. Experience
+        5. Experience
 -------------------------------------*/
 .experience {
-    padding: 50px 0 100px;
-    border-top: 1px solid #e5ebf2;
+
+    padding: 50px 0 20px;
+
 }
-.experience-content {padding-top: 100px;}
-.single-timeline-box {margin-bottom: 75px;}
+.experience-content {
+  padding-top: 100px;
+}
+
+.single-timeline-box {
+  margin-bottom: 75px;
+}
 
 /*experience-time*/
 .experience-time {
     position: relative;
 }
+
 .experience-time h2 {
     font-weight: 400;
 }
+
 .experience-time h3 {
     font-size: 16px;
     font-weight: 300;
@@ -466,6 +400,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     margin-top: 14px;
     text-transform: uppercase;
 }
+
 /*experience-time*/
 
 /*main-timeline*/
@@ -522,91 +457,74 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     border-left:15px solid #fff;
 }
 
-.experience-time-responsive{display: none;}
-/*-------------------------------------
-        8. Profiles
---------------------------------------*/
-.profiles {
-    padding:  50px 0 100px;
-    border:  1px solid #e5ebf2;
+.experience-time-responsive{
+  display: none;
 }
 
-.profiles-content {padding-top: 100px;}
-.profiles-content .col-sm-3{padding:0;}
-.profile-txt {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.single-profile {
-    position: relative;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 1px solid #b2c1ce;
-    overflow:hidden;
-    -webkit-transition:background 0.5s linear;
-    -moz-transition:background 0.5s linear;
-    -ms-transition:background 0.5s linear;
-    -o-transition:background 0.5s linear;
-    transition:background 0.5s linear;
-}
-.profile-icon-name {
-    text-transform: capitalize;
-    color: #636a82;
-    font-size: 16px;
-}
-.single-profile.profile-no-border{border-right:transparent;}
-.profile-border {
-    border-bottom: 1px solid #b2c1ce;
-}
-.single-profile-overlay{
-    display:flex;
-    align-items:center;
-    text-transform: capitalize;
-    justify-content:center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: " ";
-    width:100%;
-    height: 100%;
-    background: #d92cf9;
-    background: -moz-linear-gradient(left, #d92cf9 0%, #b636ff 100%);
-    background: -webkit-linear-gradient(left, #d92cf9 0%,#b636ff 100%);
-    background: linear-gradient(to right, #d92cf9 0%,#b636ff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d92cf9', endColorstr='#b636ff',GradientType=1 );
-    -webkit-transform:scale(0);
-    -moz-transform:scale(0);
-    -ms-transform:scale(0);
-    -o-transform:scale(0);
-    transform:scale(0);
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
-}
-.single-profile:hover .single-profile-overlay{
-    -webkit-transform:scale(1);
-    -moz-transform:scale(1);
-    -ms-transform:scale(1);
-    -o-transform:scale(1);
-    transform:scale(1);
-    top:0;
-}
-.single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
-.single-profile:hover .profile-border {border:transparent;}
+
 /*-------------------------------------
-        9. Portfolio
+        6. Hackathon
 --------------------------------------*/
-.portfolio {
-    padding:  50px 0 100px;
-    border:  1px solid #e5ebf2;
+
+.hackathon {
+
+padding: 0px 0 100px;
+
 }
 
-.portfolio-content {padding-top: 100px;}
+.Hackathon-content {
+
+padding-top: 100px;
+
+}
+
+.col-8 {
+  float: left;
+  padding: 450px;
+  padding-top: 10px;
+}
+
+.col-4 {
+  float: left;
+  margin-left: -350px;
+  padding-top: 100px;
+}
+
+ /*.hcolumn {
+  float: left;
+  width: 33.33%;
+  padding: ;
+}
+
+/* Clear floats after the columns */
+ /*.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+  .carousel {
+ width: 100%;
+ height: 100%;
+}
+
+
+/*-------------------------------------
+        7. Esports (Portfolio)
+--------------------------------------*/
+
+
+
+
+
+.esports {
+      padding:  50px 0 100px;
+    /* border:  1px solid #e5ebf2; get rid of border */
+}
+
+.portfolio-content {
+  padding-top: 100px;
+}
 
 /* ---- .item ---- */
 .isotope:after {
@@ -614,11 +532,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     display: block;
     clear: both;
 }
+
 .isotope .item {
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
     margin-bottom: 30px;
 }
+
 /*.item img*/
 .isotope .item img{
     width:100%;
@@ -629,6 +549,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     -o-transition: .5s;
     transition: .5s;
 }
+
 .isotope .item:hover  img{
     -webkit-transform:scale(1.5);
     -moz-transform:scale(1.5);
@@ -665,7 +586,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 14px;
     text-align: center;
 }
-.isotope .item:hover .isotope-overlay{
+
+ /* .isotope .item:hover .isotope-overlay{   disable blue light under esports section when you hover over images
     -webkit-transform:scale(1);
     -moz-transform:scale(1);
     -ms-transform:scale(1);
@@ -674,23 +596,221 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     top:0;
 }/*.isotope-overlay*/
 
+
+
+
+
 /*-------------------------------------
-        10. Clients
+        8. Profiles (Contact)
 --------------------------------------*/
-.clients {padding-top: 50px;}
-.clients-area {
+.profiles {
+    padding:  50px 0 100px;
+}
+
+.profiles-content {padding-top: 100px;}
+.profiles-content .col-sm-3{padding:0;}
+.profile-txt {
     display: flex;
     align-items: center;
-    height: 250px;
+    flex-direction: column;
 }
-.clients-area .item {padding: 0 25px;}
+.single-profile {
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #b2c1ce;
+    overflow:hidden;
+    -webkit-transition:background 0.5s linear;
+    -moz-transition:background 0.5s linear;
+    -ms-transition:background 0.5s linear;
+    -o-transition:background 0.5s linear;
+    transition:background 0.5s linear;
+}
+.profile-icon-name {
+    text-transform: capitalize;
+    color: #636a82;
+    font-size: 16px;
+}
+.single-profile.profile-no-border{border-right:transparent;}
+.profile-border {
+    border-bottom: 1px solid #b2c1ce;
+}
 
-.clients .clients-area .owl-carousel .owl-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius:0;
+.single-profile-overlay{
+    display:flex;
+    align-items:center;
+    text-transform: capitalize;
+    justify-content:center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    width:100%;
+    height: 100%;
+  /*  background: #d92cf9;
+    background: -moz-linear-gradient(left, #d92cf9 0%, #b636ff 100%);            remove purple highlight
+    background: -webkit-linear-gradient(left, #d92cf9 0%,#b636ff 100%);
+    background: linear-gradient(to right, #d92cf9 0%,#b636ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d92cf9', endColorstr='#b636ff',GradientType=1 ); */
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+    -ms-transform:scale(0);
+    -o-transform:scale(0);
+    transform:scale(0);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
 }
+
+.single-profile:hover .single-profile-overlay{
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1);
+    top:0;
+}
+.single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{
+/*  color: #000000;       remove white highlight */
+}
+.single-profile:hover .profile-border {
+  border:transparent;
+}
+
+
+
+
+/* ----------------------------------------------
+
+              Dont use
+
+-----------------------------------------------*/
+
+
+
+
+
+
+/*-------------------------------------
+        5.  Education
+--------------------------------------*/
+
+.education {
+    background:  #f9fbfd;
+    padding-top:  50px;
+}
+.education-horizontal-timeline {
+    padding: 80px 0;
+}
+
+/*.education-horizontal-timeline*/
+.education-horizontal-timeline .col-sm-4 {padding:0 2px;}
+
+.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
+.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
+.single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
+.single-horizontal-timeline
+
+p {
+  color: #999fb3;
+  max-width: 335px;
+}
+
+/*.timeline-horizontal-border*/
+.timeline-horizontal-border {
+    display:  flex;
+    align-items: center;
+    padding: 26px 0 30px;
+}
+.timeline-horizontal-border i {
+    font-size:  10px;
+    color: #d92cf9;
+    margin-right:  5px;
+}
+span.single-timeline-horizontal {
+    display:  inline-block;
+    background: #b2c1ce;
+    height:  1px;
+    width: 380px;
+}
+span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
+/*.timeline-horizontal-border*/
+
+/*.education-horizontal-timeline*/
+
+/*-------------------------------------
+        6.  Skills
+--------------------------------------*/
+.skills {
+
+}
+.skill-content{padding: 50px 0 80px;}
+.single-skill-content{padding-top: 100px;}
+.section-heading h2 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+
+}
+.single-progress-txt {
+    display: flex;
+}
+.single-progress-txt h3 {
+    width: 10%;
+    color: #a606c3;
+    position: relative;
+    top: 6px;
+    left: 20px;
+}
+.barWrapper {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.progress {
+    border-radius:3px;
+    overflow: visible;
+    background: #e6ecf3;
+    height:8px;
+    margin-top: 15px;
+    width: 85%;
+    margin-bottom: 37px;
+}
+.progress-bar {
+   background: #b636ff;
+    border-radius: 3px;
+   -webkit-transition: width 1.5s ease-in-out;
+   -ms-transition: width 1.5s ease-in-out;
+   -moz-transition: width 1.5s ease-in-out;
+   -o-transition: width 1.5s ease-in-out;
+   transition: width 1.5s ease-in-out;
+}
+.tooltip{
+   position:relative;
+   float:right;
+}
+.tooltip > .tooltip-inner {
+   background-color: transparent;
+   padding: 1px 5px;
+   color: #b636ff;
+   font-weight: 500;
+   font-size: 12px;
+   border-radius: 0;
+}
+.popOver + .tooltip > .tooltip-arrow {
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+   border-top: 6px solid #fff;
+   bottom: -1px;
+   transform: translateX(-50%);
+   margin-left: 0;
+}
+
 
 /*-------------------------------------
         11. Contact
@@ -811,6 +931,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     padding: 38px 0;
 }
 .hm-footer-copyright p a {color: #888ea5;}
+
+
 /*===============================
     Scroll Top
 ===============================*/
@@ -859,4 +981,3 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
-/*========================Thank you=================
