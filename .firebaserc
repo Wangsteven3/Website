@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "profile-acbb2"
+    "default": "profile-acbb2",
+    "SWANG": "swang-3f860"
   }
 }
