@@ -416,7 +416,7 @@ nav.navbar.bootsnav .navbar-toggle i{
 -------------------------------------*/
 .experience {
 
-    padding: 120px 0 0px;
+    padding: 150px 0 150px;
 
 }
 .experience-content {
@@ -512,7 +512,7 @@ nav.navbar.bootsnav .navbar-toggle i{
 
 .hackathon {
 
-padding: 20px 0 10px;
+padding: 150px 0 150px;
 
 }
 
@@ -578,12 +578,12 @@ padding-top: 80px;
 }
 
 .carousel-control.left {
-  margin-left: 130px;
+  /*margin-left: 130px; */
   background: none;
 }
 
 .carousel-control.right {
-  margin-right: 130px;
+  /*margin-right: 130px;*/
   background: none;
 }
 
@@ -603,7 +603,7 @@ padding-top: 80px;
 
 .esports {
 
-  padding:  150px 0 10px;
+  padding:  200px;
 
 }
 
@@ -688,7 +688,73 @@ padding-top: 80px;
 
 #Projects {
 
-  padding-top: 140px;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.Projects-content {
+  padding-top: 50px;
+}
+
+/* ---- .item ---- */
+.isotope:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.isotope .item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/*.item img*/
+.isotope .item img{
+    width:100%;
+    height:100%;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.isotope .item:hover  img{
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    transform:scale(1.5);
+}/*.item img*/
+
+/*.isotope-overlay*/
+.isotope-overlay{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background:rgba(31,44,108,.5);
+    display:flex;
+    align-items:center;
+    text-transform: uppercase;
+    justify-content:center;
+    flex-direction:row;
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+    -ms-transform:scale(0);
+    -o-transform:scale(0);
+    transform:scale(0);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.isotope-overlay a {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
 }
 
 
@@ -711,7 +777,7 @@ hr { /* horizontal line */
         8. Profiles (Contact)
 --------------------------------------*/
 .profiles {
-    padding:  50px 0 100px;
+    padding:  150px 0 10px;
 }
 
 .profiles-content {padding-top: 100px;}
